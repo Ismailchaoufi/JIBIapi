@@ -1,0 +1,48 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/applicationjibi
+    username: root
+    password:
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQLDialect
+    open-in-view: false
+
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: appjibi.contact@gmail.com
+    password: ekniksxajfnfdlzl
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 368624757897-geh0peuscgl4lfafbg4anutm6515hdes.apps.googleusercontent.com
+            client-secret:
+
+
+
+
+
+server:
+  port: 8081
+
+application:
+  security:
+    jwt:
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
